@@ -12,13 +12,101 @@
         <p width="20px"></p> 
         img图片 单标签；src是路径，包含绝对路径、相对路径和网站路径
         a超链接 双标签：包含绝对路径、相对路径和网站路径，锚点（），邮件，电话，弹框；
-        <img src="http://www.xinhuanet.com/photo/2021-05/05/1127409742_16201840676341n.jpg">;
+        <p></p>
+        <img src="http://www.xinhuanet.com/photo/2021-05/05/1127409742_16201840676341n.jpg" width="300">;
+        <p></p>
         <a href="http://www.xinhuanet.com/photo/2021-05/05/1127409742_16201840676341n.jpg">jump to photo</a>
+        <p></p>
         <a href="http://www.baidu.com">jump to new web</a> 
     列表：
         <ul>无序列表</ul>
         <ol type="1" start="4">有序列表</ul>
         自定义列表：
+    div:划分区域；
+    span：
+    
+    文本修饰标签：
+       b  em strong i del;
+       <b>我是加粗格式</b>
+
+    iframe：内嵌窗口（里面再放一个页面）   广告页面、  后台管理系统；
+        src="";
+        scrolling="no或auto"
+        width
+        height
+        frameborder="0或1"
+        name 命名 和a配合：
+        <p></p>
+        <iframe src="http://www.baidu.com" width="400" height="400" ></iframe>
+        <p></p>
+        <a href="http://www.baidu.com" target="win">页面1</a>
+        <a href="https://uland.taobao.com" target="win">页面2</a>
+        <p></p>
+        <iframe name="win" src="" width="800" height="400" scrolling="auto" frameborder="1" ></iframe>
+
+    注释：<!--    -->
+
+    表格：
+        <table border="" width="" cellspacing="10" bgcolor="green">
+            <tr align="center" width="10">
+                <th>name</th>
+                <th>friends</th>
+            </tr>
+            <tr>
+                <td>Miss.Liu</td>
+                <td>yeah</td>
+            </tr>
+            <tr>
+                <td>Miss.Li</td>
+                <td>no</td>
+            </tr>
+        </table>
+
+        表单：给后台发送数据
+        <p></p>
+        <form action="http://www.baidu.com" method="GET">
+            <!--后台就是www.baidu.com，将上面的内容传输过去，那么怎么将内容传输给我的邮箱呢-->
+            <label for="i1">username:</label><input id="i1" type="text" name="username"><!--label是将几个字符化为一个整体-->
+            password:<input type="password" name="password">
+            <input type="submit" value="登录喽">   <!--默认是submit--> 
+            <input type="reset" value="重置哦">
+            man: <input type="radio" name="sex">
+            girl:<input type="radio" name="sex">
+            篮球： <input type="checkbox">
+            <input type="file">
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <select name="" id="">
+                <option value="">html</option>
+                <option value="">css</option>                
+            </select>
+            <button type="submit">submitbutton</button>
+        </form>
+
+        标签：
+        <span>我要换行</span>
+        <br>
+        <span>我要换行</span>
+        <hr>
+        实体字符：
+            空格： &nbsp;  
+            &lt; &gt;&copy;
+
+        html5的标签:
+             结构化标签：
+               <header></header>
+               <section></section>
+               <section></section>
+               <footer></footer>
+               <nav></nav> <!--导航-->
+               抵制div+css，其实和div作用相同，不过是更加的语义化，增加了可读性；
+            功能化标签：
+               
+        css的使用：
+             <p style="color:red;">aaaaaaa</p>
+             
+
+
 
 
 </body>
