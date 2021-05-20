@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background: radial-gradient(rgb(148, 176, 202), rgb(138, 195, 241));
+  background: radial-gradient(rgb(124, 155, 221), rgb(126, 156, 212));
   min-height: 100vh;
   padding:0;
   margin:0;
