@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htmlstudy</title>
+    <style>p{color:red;}</style><!--还是在html中写修饰，不过是在head中写-->
+    <link rel="stylesheet" href="demo1.css"><!--采用外链的方式，在css中写修饰-->
 </head>
 <body>
     标签：(要用尖括号括起来)
@@ -26,8 +28,8 @@
     span：
     
     文本修饰标签：
-       b  em strong i del;
-       <b>我是加粗格式</b>
+       b加粗  em strong强调 i倾斜 del删除;
+       hr水平分割线 br换行
 
     iframe：内嵌窗口（里面再放一个页面）   广告页面、  后台管理系统；
         src="";
@@ -94,19 +96,53 @@
 
         html5的标签:
              结构化标签：
-               <header></header>
+               <header></header>代替了<div id="header"></div>
                <section></section>
                <section></section>
                <footer></footer>
                <nav></nav> <!--导航-->
-               抵制div+css，其实和div作用相同，不过是更加的语义化，增加了可读性；
+              抵制div+css，其实和div作用相同，不过是更加的语义化，增加了可读性；
             功能化标签：
+                <canvas style="background:black" width="800" height="800"></canvas>
+                <audio src="wangfei/王菲 - 人间 (Live).mp3">听个人间</audio>
                
         css的使用：
-             <p style="color:red;">aaaaaaa</p>
-             
+             第一种：<p style="color:red;">aaaaaaa</p>
+                   给所有的p都加上了；
+             第二种：head中写上style，<style>p{color:red;}</style>，添加样式给所有的p标签了：
+             第三种：链接，<link rel="stylesheet" href="demo1.css">，在demo1中放置渲染的标签；
+                    demo1.css：    <style>p{color:red;}</style>
+             第四种：@important'路径';
+                      1. 在demo1.css中放置一个style，然后在head之中@important'路径';
+                      2. 在dem2.css中放置一个style，然后在dem1.css中放置一个引用,@important'demo2.css';在head之中<link rel="stylesheet" href="demo1">
 
-
+             选择器：
+                 id选择：<p id="p1"></p>
+                     在head中仅仅设置<style>#p1{color:red;}</style>
+                 类选择器：<p class="q1"></p>
+                      在head中仅仅设置<style>.q1{color:red;}</style>
+                 属性选择器：<p class="q1"></p>
+                      在head中仅仅设置<style>[class]{color:red;}</style>
+                      在head中仅仅设置<style>[class="q1"]{color:red;}</style>
+                 属性选择器：<p title="q1"></p>
+                      在head中仅仅设置<style>[title]{color:rgb(124, 71, 71);}</style>     
+                 父子级选择器：<p id="p1">黄棕色</p>  <div class="p1">黑色</div> <p id="p2">黄棕色</p>  <div>黑色</div>
+                      <style> 
+                        p{color: rgb(124, 71, 71);}
+                        p,div{color: royalblue;}
+                        或者 .p1{color: royalblue;}
+                        或者 id.p1{color: royalblue;}                        
+                      </style>
+                选择权重器：！important>id选择器>类选择器,属性选择器>标签选择器，>通配符选择器；
+                       
+       P19集：文字样式,这些可以放在style中，也可以直接放在标签里面；
+            <font-size>文本大小</font-size>
+            <font-family></font-family>
+            <font-weight：weight></font-weight>           
+            <font-weight：bold>粗体，正常</font-weight>           
+            <font-style：italic>倾斜italic 正常normal</font-weight>           
+            <color:red></font-weight>     
+            <h4 font-size="16" fo    nt-family="" font-weight="500" font-style="italic" color="red">文字样式</h4>
 
 
 </body>
