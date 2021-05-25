@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            /*去掉所有的padding和margin*/
+        }
+    #mid{
+        /*设置整体的div并居中显示*/
+        width: 1080px;
+        height: 320px;
+        margin:0 auto;  
+        border:solid;
+        /*background-color: beige*/;
+    }
+
+    #mid div{
+        height:320px;
+        float:left;
+        margin-right: 20px;
+    }
+    #mid .lft{
+        width:200px;
+    }
+    #mid .rte{
+        width:860px;
+        margin-right: 0px;
+    }
+
+    #mid .rte div{
+        height: 150px;
+        width: 200px;
+        float: left;
+        margin: right 20px;
+        background-color: cornflowerblue;
+    }
+    #mid .rte .mag0{
+        margin-right: 0px;
+    }
+    #mid .rte .btm2{
+        margin-bottom: 20px;
+    }
+    
+    #mid .lft img{
+        width: 200px;
+        height: 320px;
+    }
+    #mid .rte img{
+        width: 200px;
+        height: 150px;
+    }
+    </style>
+    
+</head>
+<body>
+    采用浮动布局：宽度1080，在正中；宽度分为5份儿，高度上左边一个分为一份,高度150，右边分为8份儿,高度150,每份200宽度；中间布置图片，图片设置为相应方框大小；aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="mid" class="clearfix">
+        <div class="lft"><img src="wangfei/4.3.jpg" alt=""></div>
+        <div class="rte">
+            <div class="smd btm2"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd btm2"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd btm2"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd btm2 mag0"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd"><img src="wangfei/4.1.jpg" alt=""></div>
+            <div class="smd mag0"><img src="wangfei/4.1.jpg" alt=""></div>
+        </div>
+    </div>
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
+
+</body>
+</html>

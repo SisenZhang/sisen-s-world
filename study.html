@@ -143,7 +143,75 @@
             <font-style：italic>倾斜italic 正常normal</font-weight>           
             <color:red></font-weight>     
             <h4 font-size="16" fo    nt-family="" font-weight="500" font-style="italic" color="red">文字样式</h4>
+        P20：文本样式
+        文本对齐，text-align:对齐方式，left，right，center,justify
+        文本行高：line-height：30px
+            文本垂直水平居中：line-align:center
+                              line-height:物体的高度
+        文本下划线：text-decoration:
+             underline,line-through,over-line,none(没有效果，去除a标签的下划线)；后面可以加下划线的颜色（比如#db406c）
+    p21宽高 和边框：
+        width:
+        height:
+        边框（border）:宽度（1px） 类型(dashed，solid) 颜色（red）  
+              border-top（上边框）（left，right，top,bottom）
+              boder-style;border-color;
+    p22:背景：
+        width:
+        height:
+        background-color：blue；
+        background-image:url="路径"；（默认重复）
+        background-repeat：repeat-x；repeat-x；no-repeat；
+        background-position：left、top、right、bottom； 或left bottom等； 或位置20px 30px；
+        可以做雪碧图（精灵图），显示图片的局部；
+        background：color url（） no-repeat 0px 10px;
 
+    盒子模型：
+        第一层：内容大小width 和 height
+        第二层：边框宽度border 
+        第三层：padding
+        第四层：margin  可以分边更改：margin：10px 20px或者margin：10px 20px  30px ；margin：10px 20px 30px 40px； 
+            margin：0 auto（表示居中）； 
+        存在默认值；
+        去掉这些：
+        采用通配符去掉:在style中写：<style>margin：0px；padding：0px</style>
+    p24:标签分类
+        块级标签（p，div，h），独占一行,  能设置宽高，   用在结构上， 可以设置margin，   
+        行内标签, 不独占一行，不能设置宽高，用在内容上，  不可以设置margin，
+        行内块，image，
+        可以互相转化：display：inline(block)，inline-block;在head中设置style；
+    
+    p25：浮动布局：
+        标准文档流：按照标签的特性 正常排列，与常理相同；
+        浮动文档流：
+            作用：文字浮动，换行失效；改变类型，将inline可能改成block，
+            应用：文本环绕，
+                  浮动布局，让元素变成一行；
+                  利用margin调整距离；
+            出现的问题：父级浮动，子集跟进了，但是不需要；（清楚父级的浮动）  
+            清除浮动：
+                清除的必须是块，可以分为clear：left，（right）（both）。比如可以清除. clearfix（浮动流）的both，或者浮动流后一个的clear：right； 
+                BFC：把周围的格式标准化；
+                    position：absolute；
+                    display：inline-block；
+                    float：left；
+                    overflow：hidden（溢出隐藏）
+        标签引用可以直接用：标签（类要加点，id加# ；一个标签可以属于多个类；套娃可以这样 h1>left>left1(h1 left left1),比如 <h1 id="h1" class="left left1"></h1>）
+        
+    p25. 2伪元素：
+        标签（p）：after（before）｛content：'你是猪,必须要写，可以为空'； background：red； display：block；width：10px； ｝  在style中设置伪元素的方法
+        应用：在元素前后添加内容或者更改元素；比如给浮动元素设置class="clearfix";然后在style中设置. clearfix：after{ clear : both}
+    p26. 伪元素伪类
+    :link（未访问时）  :hover（鼠标在其上时候） :active(点的一瞬间) :vistied（访问完之后）
+    如果添加效果图，如a:link{color:red;} a:hover{color:red;}   需要按照lvha的顺序写；
+
+    p27定位：
+        相对定位：position：relative； left：10px； bottom：10px； 相对于原来的位置定位；         给绝对定位做父级；
+        绝对定位：position：absolute； left:10px; bottom:10px;     相对于父级定位的，            固定小图标，运动；（绝对不能用作布局）
+        固定定位：position：fixed；left:10px; bottom:10px;         相对于body，即相对于可视区域； 广告；
+    
+    
+ 
 
 </body>
 </html>
