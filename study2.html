@@ -55,11 +55,440 @@
         width: 200px;
         height: 150px;
     }
+
+    /*双飞翼2布局的修饰*/    html,body{
+        height: 100%;
+        width: 100%;
+    }
+     .lft2{
+        height: 100%;
+        width: 80px;
+        background: rgb(24, 21, 22);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }   
+     .ctr2{
+        height: 100%;
+        background-color: rgb(26, 235, 19);
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+     .rgt2{
+        height: 100%;
+        width: 80px;
+        background: rgb(9, 31, 128);
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    /*双飞翼3布局的修饰 */
+    #sfy3{
+        height: 100px;
+    }
+    #sfy3 div{
+        float: left;
+    }
+    #sfy3 .lft3{
+        height: 100%;
+        width: 10%;
+        background: rgb(71, 201, 39);
+    }
+    #sfy3 .ctr3{
+        height: 100%;
+        width: 80%;
+        background-color: rgb(24, 23, 23);
+    }
+    #sfy3 .rgt3{
+        height: 100%;
+        width: 10%;
+        background: rgb(19, 224, 231);
+    }
+
+    /**/
+    #box1{
+        width: 80px;
+        height: 24px;
+        border: solid;
+        overflow: hidden;
+        color: blueviolet;
+    }
+    /**/
+    #box2{
+        width: 200px;
+        height: 100px;
+        border: solid;
+        color: rgb(116, 226, 43);
+        margin: 20px auto;
+        white-space: nowrap;/* 强制换行 */
+        /*overflow: scroll;*/
+        overflow: hidden;
+        text-overflow: ellipsis;/*将溢出的文字加省略号；*/
+    }
+    #box3{
+        width: 200px;
+        height: 65px;
+        border: 1px solid blue;
+        color: rgb(116, 226, 43);
+        margin: 0px auto;
+        /* white-space: nowrap;强制换行 */
+        /* overflow: scroll; */
+        /* overflow: hidden; */
+        overflow: auto;
+        /* text-overflow: ellipsis;将溢出的文字加省略号； */
+    }
+
+    /* p35 */
+    input:checked{
+        background-color: beige;
+    }
+
+    input:disabled{
+        background-color: beige;
+    }
+    input:enabled{
+        background-color: rgb(12, 182, 103);
+    }
+    /* p36 背景图 */
+    #bkg1{
+        width: 50%;
+        height: 50%;
+        border:20px slide chartreuse;
+        background: url("wangfei/4.3.jpg");
+        background-size: 100% 200%;
+        background-clip: border-box;
+        background-origin: border-box;
+    }
+
+    /* p38过渡 */
+    #tst{
+        width: 100px;
+        height: 100px;
+        margin: 0px auto;
+        border:1px solid crimson;
+        background-color: lawngreen;
+        background-image: url("wangfei/4.1.jpg");
+        transition: width 2s cubic-bezier(0.55,-0.57, 0.29, 1.57) 1s;
+        transition-delay: 2s;
+    }
+    #tst:hover{
+        width: 200px;
+    }
+    /* p39透明度 */
+    #tsp1{
+        /* 所有内容均透明 */
+        width: 300px;
+        height: 300px;
+        display: block;
+        position: absolute;
+        left: 20%;
+        /* top: 50%; */
+        margin-left: -150px;
+        background-color: rgb(96, 152, 226);
+        opacity: 0.5;
+        text-emphasis-color: red;
+    }
+    #tsp2{
+        /* 部分内容透明 */
+        width: 150px;
+        height: 150px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        /* top: 50%; */
+        margin-left: -75px;
+        background-color: rgba(10, 240, 48,0.5);
+    }
+    
+    #tsp3{
+        /* tsp3:31-33；先用父级定位，再添加背景图片,加透明层，再加文字 */
+        width: 300px;
+        height: 300px;
+        position:relative;
+        left: 80%;
+        margin-left: -150px;
+    }
+    #tsp31{
+        width: 300px;
+        height: 300px;
+        position:absolute;
+        margin-left: -150px;
+        background: url("wangfei/4.1.jpg");
+        background-size: 100%;
+        /* opacity: 0.5; */
+    }
+    #tsp32{
+        /* block不是标准文档流，不会占用地方； */
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        margin-left: -150px;
+        background-color: rgba(16, 17, 15,0.5);
+        background-size: 100%;
+        /* opacity: 0.5; */
+    }
+    #tsp33{
+        width: 300px;
+        height: 300px; 
+        position: absolute;
+        margin-left: -150px;
+        font-weight: bold;
+        color: mediumspringgreen;
+        display: block;/*没用...*/
+    }
+    /* p42矢量图 */
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    @font-face {
+        font-family: 'iconfont';
+        src: url('font/iconfont.ttf?t=1622177687308') format('truetype');
+    }
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: red;
+    }
+    /* p43...3D效果： */
+    #d31{
+        /* 旋转，缩放，歪斜，平移；   */
+        width: 300px;
+        height:300px;
+        border: 1px dashed red;
+        background: url("wangfei/4.1.jpg");
+        background-size: cover;
+        margin: 0 auto;
+        transition:all 1s  cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    #d31:hover{
+        /* transform:rotate(45deg) rotateX(45deg); */
+        transform: rotate(45deg) rotateX(45deg) scale(0.5) skewX(20deg)  ;
+        /* transform:skewX(20deg) skewY(20deg) scale(0.5); */
+    }   
+    #d32{
+        /* 景深的效果*/
+        width: 300px;
+        height:300px;
+        border: 1px dashed red;
+        background: url("wangfei/4.1.jpg");
+        background-size: cover;
+        margin: 0 auto;
+    }
+    #d32 div{
+        perspective:800px; /*定义3d元素与视图的距离；没啥用*/
+    }
+    #d33{
+        /* 立方体并旋转； */
+        width: 300px;
+        height: 300px;
+        position: relative;
+        margin: 0 auto;
+        transform: rotateY(10deg) rotateX(-10deg) ;
+        /* perspective: 800px; */
+        transform-style: preserve-3d;/*显示3d的属性*/
+    }
+    #d33 div{        
+        width: 300px;
+        height: 300px;
+        position: absolute;
+    }
+    #front{        
+        background-image: url("wangfei/4.1.jpg");
+        background-size: cover;
+        /* background-color: cyan; */
+        transform: translateZ(150px);
+        /* background-clip: border-box; */
+    }
+    #back{
+        /* background-image: url("wangfei/4.1.jpg"); */
+        background: cornflowerblue;
+        transform: translateZ(-150px);
+    }
+    #left{
+        background-image: url("wangfei/4_副本.png");
+        /* background-color: red; */
+        transform:  translateX(-150px) rotateY(90deg);
+    }
+    #right{
+        background-image: url("wangfei/4_副本.png");
+        background-size: 100% 100%;
+        transform: translateX(150px) rotateY(-90deg);
+        /* background-color: rgb(83, 17, 206); */
+    }
+    #top{
+        /* background-color: rgb(26, 235, 19); */
+        background-image: url("wangfei/4.3.jpg");
+        background-size: 100% 100%;
+        transform:translateY(-150px) rotateX(90deg);
+    }
+    #bottom{
+        background-image: url("wangfei/4.2.jpeg");
+        background-size: 100% 100%;
+        transform: translateY(150px) rotateX(90deg);
+    }
+    @keyframes move{
+        from{
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        to{
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+    #d33:hover{
+        animation: move 2s infinite linear forwards;
+    }
+
+    /* p47：渐变： */
+    #lgd div{
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        float: left;
+        display: block;
+    }
+    #lgd1{
+        background: linear-gradient(green,pink);
+    }
+    #lgd2{
+        background: linear-gradient(green 25%,pink 75%);
+    }
+    #lgd3{
+        background: linear-gradient(green 25px,pink 75px);
+    }
+    #lgd4{
+        background: linear-gradient(-135deg, green,pink);
+    }
+    #lgd5{
+        background: linear-gradient(green,pink,yellow);
+    }
+    #lgd6{
+        background: -webkit-linear-gradient(right top,green,pink);
+    }
+    #lgd7{
+        background:-webkit-repeating-linear-gradient(green 25px,pink 50px);
+    }
+    #lgd8{
+        background:-webkit-radial-gradient(yellow,pink,green);
+    }
+    #lgd9{
+        background:-webkit-radial-gradient(20px 20px ,yellow 25%,pink 50%,green 75%);
+    }
+    #lgd10{
+        width: 900px;
+        height: 200px;
+        border: seagreen;
+    }
+    /* .clearfix::after{
+        content: none;内容；
+        display: block;  为什么总是失败；
+        clear: both;
+    }    */
+    #progrsbar{
+        clear:both;
+    }
+    #progrsbar{
+        /* 渐变的滚动效果 */
+        width: 200px;
+        height: 20px; 
+        position: relative;
+        overflow: hidden;  
+    }
+    #bar1{
+        width: 600px;
+        height: 20px;        
+        position: absolute;
+        left: -300px;
+        background:repeating-linear-gradient(90deg,yellow 6.5px,pink 13px,green 20px);     
+        transform: translateX(20px);
+        animation: bar2 3s infinite linear forwards;
+    }
+    @keyframes bar2{
+        from{
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(200px);
+        }
+    } 
+    #lgd10 p{
+        /* 给文字添加颜色或者渐变色 */
+        /* color: rgba(194, 28, 28, 0.5); */
+        /* background: seagreen; */
+        background: linear-gradient(rgba(212, 22, 9,1),rgba(129, 253, 13, 1));
+        -webkit-background-clip:text;
+    }
+
+    /* p48：蒙版-透明度-渐变 */
+    #msk{
+        position: relative;
+        background-color: black;
+    }
+    #msk div{
+        width: 800px;
+        height: 450px;
+        float: left;
+        border:1px solid red ;
+    }
+    #msk1{
+        background-image: url("wangfei/4.4.gif");
+        background-size:cover;        
+        -webkit-mask:url("wangfei/msk4.png") 10% 10%;
+    }
+    #msk2{
+        background-image: url("wangfei/4.5.png");
+        background-size:100% 100%;        
+        -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0) 100% );
+    }
+    #msk3{
+        background-image: url("wangfei/4.5.png");
+        background-size:100% 100%;        
+        -webkit-mask: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));
+    }
+    #msk4{        
+        /* 文字蒙版 */
+        height: 100px;
+    }
+    #msk4 p{
+        background-image: url("wangfei/4.5.png");
+        background-size:100% 100%;        
+        -webkit-background-clip:text;
+        color: rgba(10, 240, 48,0);
+    }
+    #msk5{
+        /* 映像 */        
+        background-color: black;
+        background: url("wangfei/4.5.png");
+        background-size: cover;
+        -webkit-box-reflect: right 5px linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,1));
+    }
+    /* .clearfix3::after{
+        content: none;
+        display: block;
+        clear: both;
+    } */
+    #end{
+        clear:both;
+    }
+    
+
     </style>
     
 </head>
 <body>
-    采用浮动布局：宽度1080，在正中；宽度分为5份儿，高度上左边一个分为一份,高度150，右边分为8份儿,高度150,每份200宽度；中间布置图片，图片设置为相应方框大小；aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div class="lft2"></div>
+    <div class="ctr2"></div>
+    <div class="rgt2"></div>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    采用浮动布局：宽度1080，在正中；宽度分为5份儿，高度上左边一个分为一份,高度150，右边分为8份儿,高度150,每份200宽度；中间布置图片，图片设置为相应方框大小；
+    <br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     <div id="mid" class="clearfix">
         <div class="lft"><img src="wangfei/4.3.jpg" alt=""></div>
         <div class="rte">
@@ -73,9 +502,88 @@
             <div class="smd mag0"><img src="wangfei/4.1.jpg" alt=""></div>
         </div>
     </div>
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <br>采用的是float：left浮动来做到的，并不是采用position：absolute，因为此时absolute父级变成了html而不是sfy3；
+    <div id="sfy3" class="clearfix">
+            <div class="lft3"></div>
+            <div class="ctr3"></div>
+            <div class="rgt3"></div>
+    </div>
+    <br>p31-33：溢出；    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="box1">aaaaaaaaaaaaaaaaaaaa如果写单个字符串是不会主动换行的；</div>
+    <div id="box2">寒读之以当裘，孤寂而读之，以当友朋，幽忧而读之，以当琴瑟；</div>
+    <div id="box3">长恨歌，汉皇重色思倾国，御宇多年求不得，杨家有女初长成，养在深闺人未识，天生丽质难自弃，一朝选在君王侧</div>
+    <br>p35  输入框；    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <input type="text" value="寒读之以当裘" disabled>
+    <input type="text" placeholder="孤寂而读之" enabled>
+    <input type="checkbox" checked>
+    <br>p36  背景的显示;    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="bkg1"></div>
+    <br> p38:过渡：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="tst"></div>
+    <br>p39:透明度：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
+    <div id="tsp1">明修栈道暗度陈仓</div>
+    <div id="tsp2">问渠那得清如许，为有源头活水来！</div>
+    <div id="tsp3">
+        <div id="tsp31"></div>
+        <div id="tsp32"></div>
+        <div id="tsp33">将进酒，君不见黄河之水天上来，奔流到海不复回；君不见高堂明镜悲白发，朝如青丝暮成雪；人生得意须尽欢，莫使金尊空对月；天生我材必有用，千金散尽还复来；
+            烹羊宰牛且为乐，会须一饮三百杯；岑夫子，丹丘生，将进酒，杯莫停；与君歌一曲，请君为我倾耳听；钟鼓馔玉不足贵，但愿长醉不复醒；古来圣贤皆寂寞，惟有饮者留其名；
+            陈王昔时宴平乐，斗酒十千恣欢谑；主人何为言少钱，径须沽取对君酌；五花马、千金裘。呼儿抢出换美酒，与尔同销万古愁。</div>
+    </div>
+        <br>p42:矢量图：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <script src="font/iconfont.js"></script>
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-startup-rocket-svgrepo-com"></use>
+    </svg>
+    <span class="iconfont">&#xe70b;;</span>
+    <br>p43...3D效果：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="d31"></div>
+    <div id="d32"></div>
+    <div id="d33">
+        <div id="front"></div>
+        <div id=back></div>
+        <div id=left></div>
+        <div id=right></div>
+        <div id=top></div>
+        <div id=bottom></div>
+    </div>   
+    <br>p47：渐变：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    <div id="lgd" class="clearfix">
+        <div id="lgd1"></div>
+        <div id="lgd2"></div>
+        <div id="lgd3"></div>
+        <div id="lgd4"></div>
+        <div id="lgd5"></div>
+        <div id="lgd6"></div>
+        <div id="lgd7"></div>
+        <div id="lgd8"></div>
+        <div id="lgd9"></div>
+    </div>
+    <div id="progrsbar">
+        <div id="bar1"></div>
+    </div>
+    <div id="lgd10">
+        <p>君不见黄河之水天上来，奔流到海不复回；君不见高堂明镜悲白发，朝如青丝暮成雪；人生得意须尽欢，莫使金樽空对月；天生我材必有用，千金散尽还复来；
+            烹羊宰牛且为乐，会须一饮三百杯；岑夫子，丹丘生，将进酒，杯莫停；与君歌一曲，请君为我倾耳听；钟鼓馔玉不足贵，但愿长醉不复醒；古来圣贤皆寂寞，惟有饮者留其名；
+            陈王昔时宴平乐，斗酒十千恣欢谑；主人何为言少钱，径须沽取对君酌；五花马、千金裘。呼儿抢出换美酒，与尔同销万古愁。
+        </p>
+    </div>
 
-
+    <br>p48 蒙版：透明图/渐变图 的应用：    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 
+    <div id="msk" class="clearfix3">
+        <div id="msk1"></div>
+        <div id="msk2"></div>
+        <div id="msk3"></div>
+        <div id="msk4">
+            <p>君不见黄河之水天上来，奔流到海不复回；君不见高堂明镜悲白发，朝如青丝暮成雪；人生得意须尽欢，莫使金樽空对月；天生我材必有用，千金散尽还复来；
+                烹羊宰牛且为乐，会须一饮三百杯；岑夫子，丹丘生，将进酒，杯莫停；与君歌一曲，请君为我倾耳听；钟鼓馔玉不足贵，但愿长醉不复醒；古来圣贤皆寂寞，惟有饮者留其名；
+                陈王昔时宴平乐，斗酒十千恣欢谑；主人何为言少钱，径须沽取对君酌；五花马、千金裘。呼儿抢出换美酒，与尔同销万古愁。
+            </p>
+        </div>
+        <div id="msk5"></div>
+    </div>
+    <div id="end"><br>将进酒，杯莫停！made by SisenZhang in NanHang!</div>
 </body>
 </html>

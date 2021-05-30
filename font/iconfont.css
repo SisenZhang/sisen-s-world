@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1622177687308') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dropper-svgrepo-com:before {
+  content: "\e70a";
+}
+
+.icon-loupe-search-svgrepo-com:before {
+  content: "\e70b";
+}
+
+.icon-idea-svgrepo-com:before {
+  content: "\e70c";
+}
+
+.icon-pencil-case-svgrepo-com:before {
+  content: "\e70d";
+}
+
+.icon-photo-camera-photograph-svgrepo-com:before {
+  content: "\e70e";
+}
+
+.icon-startup-rocket-svgrepo-com:before {
+  content: "\e70f";
+}
+
+.icon-VRtiyan:before {
+  content: "\e76b";
+}
+
+.icon-fangkeshuai:before {
+  content: "\e76c";
+}
+
+.icon-shipinzhanshi:before {
+  content: "\e76d";
+}
+
+.icon-loushizixun:before {
+  content: "\e76e";
+}
+

@@ -29,108 +29,42 @@
     <h4><br>立讯精密</h4>
     立讯精密在短时期内仍然是一家好公司，而且现在估值已经回归至合理水平，距离行业平均稍微高一点点；
     2021.5.14 立讯精密 下跌至32元左右 
-
+    2021.5.29现在已经周六，在周一的时候发现立讯已经洗盘洗的差不多了，那时候在36了没进，没想到之后一路冲高没有回落，这次应该不会回落了，因为这次把筹码给出去就拿不回来了。
+    
     <script>
- 
-
         (function() {
-         
-        
             var coreSocialistValues = ["最近行情不好", "最近行情不好", "最近行情不好", "最近行情不好", "最近行情不好", "短线", "强烈止盈", "强烈止盈", "爱国", "敬业", "诚信", "友善"]
-         
-        
               , index = Math.floor(Math.random() * coreSocialistValues.length);
-         
-        
             document.body.addEventListener('click', function(e) {
-         
-        
                 if (e.target.tagName == 'A') {
-         
-        
                     return;
-         
-        
                 }
-         
-        
-                var x = e.pageX
-         
-        
-                  , y = e.pageY
-         
-        
-                  , span = document.createElement('span');
-         
-        
-                span.textContent = coreSocialistValues[index];
-         
-        
+                var x = e.pageX   
+                  , y = e.pageY                
+                  , span = document.createElement('span');               
+                span.textContent = coreSocialistValues[index];              
                 index = (index + 1) % coreSocialistValues.length;//取模循环
-         
-        
                 span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
-         
-        
                 document.body.appendChild(span);
-         
-        
                 animate(span);
-         
-        
             });
-         
-        
             function animate(el) {//动画
-         
-        
                 var i = 0
-         
-        
                   , top = parseInt(el.style.top)
-         
-        
                   , id = setInterval(frame, 24);
-         
-        
                 function frame() {//帧
-         
         
                     if (i > 180) {
-         
-        
                         clearInterval(id);
-         
-        
                         el.parentNode.removeChild(el);
-         
-        
                     } else {
-         
-        
                         i += 2;
-         
-        
                         el.style.top = top - i + 'px';
-         
-        
                         el.style.opacity = (180 - i) / 180;
-         
-        
                     }
-         
-        
                 }
-         
-        
             }
-         
-        
         }());
-         
-        
-         
-        
         </script>
 </body>
 </html>

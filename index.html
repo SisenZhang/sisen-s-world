@@ -4,40 +4,413 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sisen's world</title>
+    <title>希森森林</title>
     <style>
-        #background1{z-index:-1;}
-        #content1{z-index:1;}
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        /*1两个部分：左右 ---------------------------------------------------*/
+        #tot{
+            display: flex;
+        }
+        #lft{
+            width: 20vw;
+            /* background-color:chocolate */
+        }   
+        #rgt{
+            flex: 1;
+            background-color:black;
+            background-color: rgba(12, 189, 233,0.5);
+        } 
+            /* 1.1-1.3----------------左侧部分---------------------------- */
+            /* 1.1 couplet------------------------------------------------人生信条----------------------------------------------------- */
+            #couplet{
+                width: 100%;
+                height: 100vh;
+                background-color: cornsilk;
+                background-image: url("bkg/桥水.jpg");
+                display: flex;
+                justify-content:space-around;
+            }
+                #couplet div{
+                    margin: auto 0 ;
+                    width: 40%;
+                    height: 80%;  
+                    /* background-color: aqua;          */
+                    font-size: 1.5em;
+                    writing-mode: vertical-lr;
+                    /* writing-mode: vertical-rl; */
+                    text-align: center;
+
+                }
+            #idea{
+                /* background: linear-gradient(green,pink); */
+            }
+            /* 1.2 earth-----------------------------------------------人生位置---------------------------------------------------- */
+                    #earth{
+                        height:20vw;
+                        width: 100%;
+                        background-color: rgba(0,0,0,0.5);
+                        overflow:scroll;
+                        overflow: hidden;
+                    }
+                            #earth div{
+                                height:280%;
+                                width: 300%;
+                                margin-top: -90%;
+                                margin-left: -100%;
+                                background-color: rgba(0,0,0,0.5);
+                                overflow: hidden;
+                            }
+            /* 1.3 idea content-----------------------------------------------思维跳动---------------------------------------------------- */
+                    #idea #ideactt{
+                        background:linear-gradient(rgba(11, 212, 11,0.5),rgba(238, 173, 184,0.5));
+                    }
+            /*2.1-2.4 ---------------------右侧部分------------------ */
+            #rgt div{
+                width: 100%;
+                margin-top: 10x;
+                margin-bottom: 10px;
+                /* display: flex;
+                flex-direction: column; */
+            }
+            /* title:2.1--------------------------------------------全文标题栏--------------------------------------------------- */
+            #title{
+                height:25vh;
+                background-color: aqua; 
+                background-image: url("bkg/绿色.jpg");  
+                background-repeat: no-repeat;   
+                background-position-x: center; 
+                /* background-size: contain; */
+                background-size: cover;
+                background-size: 100% 100%;
+                position: relative;  
+            }
+                    #rgt #title #idolcubic{
+                        height: 80%;
+                        width: calc(25vh * 0.8);
+                        margin-top:calc(25vh * 0.1);
+                        margin-left: calc(25vh * 0.1);
+                        position:absolute;
+                        background-color:rgba(230, 29, 29, 0.0);
+
+                        transform: rotateY(10deg) rotateX(-10deg) ;
+                        /* perspective: 800px; */
+                        transform-style: preserve-3d;/*显示3d的属性*/
+                        animation: move 2s infinite linear forwards;
+                    }
+                            #rgt #title #idolcubic div{        
+                                width: 50%;
+                                height: 50%;
+                                position: absolute;
+                                margin-top: 25%;
+                                margin-left: 25%;
+                            }
+                            #rgt #title #idolcubic #front{        
+                                background-color: cyan;
+                                transform:translateZ(5vh);
+                                /* background-clip: border-box; */
+                                background-image: url("wangfei/4.1.jpg");
+                                background-size: cover;
+                            }
+                            #rgt #title #idolcubic #back{                                
+                                /* background-color: red; */
+                                transform: translateZ(-5vh);
+                                background-image: url("wangfei/4.1.jpg");
+                                background-size: 100% 100%;
+                            }
+                            #rgt #title #idolcubic #left{
+                                /* background-color: red; */
+                                background-size: 100% 100%;
+                                transform:  translateX(-5vh) rotateY(90deg);
+                                background-image: url("wangfei/4.1.jpg");
+                            }
+                            #rgt #title #idolcubic #right{
+                                /* background: red; */
+                                background-size: 100% 100%;
+                                transform: translateX(5vh) rotateY(-90deg);
+                                background-image: url("wangfei/4_副本.png");
+                            }
+                            #rgt #title #idolcubic #top{
+                                /* background: red; */
+                                background-size: 100% 100%;
+                                transform:translateY(5vh) rotateX(90deg);
+                                background-image: url("wangfei/4.3.jpg");
+                            }
+                            #rgt #title #idolcubic #bottom{
+                                /* background: red; */
+                                background-size: 100% 100%;
+                                transform: translateY(-5vh) rotateX(90deg);
+                                background-image: url("wangfei/4.3.jpg");
+                            }
+                            @keyframes move{
+                                from{
+                                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                                }
+                                to{
+                                    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+                                }
+                            }
+                    #title #ttmain{            
+                        width:100%;
+                        height:100%;
+                        font-size: 1em;
+                        text-align: center;
+                        line-height: 25vh;
+                        position: absolute;
+                        margin-top:-1em;
+                    } 
+                    #title #ttmain #subtitle{
+                        width:100%;
+                        height:100%;
+                        font-size:1em;
+                        text-align: center;
+                        line-height: 25vh;
+                        position: absolute;
+                        right: -2em;
+                        top: 1em;
+                    }
+
+            /* idol  2.2-----------------------------------------------非我王菲------------------------------------------------ */
+            #idol{
+                background-color: beige;
+                display: flex;
+                position: relative;
+            }
+                    #idol #text1{               
+                        height: 10vh;
+                        /* background-color: red; */
+                        position: absolute;                        
+                        left: 100px;
+                        font-size: 1em;
+                        line-height: 10vh;
+                        font-weight: bold;
+                    }
+                    #idol #idolsongs{
+                        /* flex: 1; */
+                        position: absolute;
+                        left: 100px;
+                        top: 10vh;
+                        /* background-color:aqua; */
+                        z-index: 9999;
+                    }
+                    #idol #idolpictures{
+                        flex: 1;
+                        /* background-color:rgba(red, green, blue, alpha); */
+                        /* background-color: rgba(0,0,0,0.5); */
+                        -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0) 100% );
+                        float: left;
+                    }
+                            #idol #idolpictures img{
+                                width:auto ;
+                                height: 10vw;
+                            }
+            /*stock 2.3--------------------------------------------资本风云--------------------------------------------------- */
+            #stock{
+                background-color: azure;
+            }
+                    #stock  #text2{               
+                                height: 10vh;
+                                margin-left: 100px;
+                                /* background-color: red; */
+                                font-size: 1em;
+                                font-weight: bold;
+                                line-height: 10vh;
+                    }
+                    #stock  #stkctt{
+                                margin-left: 100px;
+                    }
+            /* link 2.4----------------------------------------------宝藏挖掘------------------------------------------------- */
+            #link{
+                display: flex;
+                justify-content: space-between;
+                background-color: rgba(0,0,0,0.5);
+                position: relative;
+            }
+                    #link  #text3{               
+                                    height: 10vh;
+                                    margin-left: 100px;
+                                    position: absolute;
+                                    /* background-color: red; */
+                                    font-size: 1em;
+                                    font-weight: bold;
+                                    line-height: 10vh;
+                        }
+                    #link #linkcontent{
+                        flex: 1;
+                        margin-top: 10vh;
+                        margin-left: 100px;
+                        background-color:springgreen;
+                        background-image: url("bkg/桥.jpg");
+                        background-size: 100% 100%;
+                    }
+                    #link #endnote{
+                        flex: 1;
+                        margin-top: 10vh;
+                        background-color:salmon;
+                        margin-left: 20vw;
+                        background-image: url("bkg/写字板.jpg");
+                        background-size: 100% 100%;
+                        text-align: center;
+                    }
     </style>
-
 </head>
+<!-- 正文： -->
 <body>
-    <div id="background1">
-    <!--星空背景，-->
-    <link rel="stylesheet" href="css/style.css">
-    <script src='js/lodash.js'></script>
-    <script src="js/index.js"></script> 
-    </div>
-    <div id="content1">
-    <h3 style="color:royalblue;"><br>sisen's world</h1>
-    <br>
-    爬虫看电影：首先搜索到电影网址，然后在前面加上wn.run/搜索；
-    <br>
-    <a href="wangfei.html">know more about my idol</a>
-    <br>
-    <img title="王菲" src="wangfei/4.2.jpeg" width="500px">
-    <br>
-    <a href="market.html">stock market </a>
-    <br>
-    <a href="https://cybermap.kaspersky.com/cn">打开地图</a>
-	<br>
-    <a href="dairy.html" target="_blank"><span style="color:springgreen">随笔!</span></a>
-    <br>
-    
-    <a href="mailto:2264496741@qq.com">mail me!</a>
-    <span></span> 
-    </div>
+    <div id="tot">
+        <!--left: ***************左侧************* -->
+        <div id="lft">            
+            <!--couplet: ********************************************人生信条*************************************************** -->
+            <div id="couplet">
+                <div id="tpCplt">
+                    <br>君不见黄河之水天上来，
+                    <br>奔流到海不复回！
+                </div>
+                <div id="btmcplt">
+                    <br>君不见高堂明镜悲白发，
+                    <br>朝如青丝暮成雪！
+                </div>
+            </div>
+            <!--earth: ********************************************人生位置*************************************************** -->
+            <div id="idea">
+                <div id="earth">
+                    <!-- 素材：http://stuffin.space/ -->
+                    <div id="earthovflhd">
+                    <iframe src="https://cybermap.kaspersky.com/cn" scrolling="auto" frameborder="1" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+            <!--idea content: ********************************************思维跳动*************************************************** -->                    
+                <div id="ideactt">
+                    <br> 将进酒：君不见黄河之水天上来，奔流到海不复回！
+                    <br>idea
+                    <br>idea
+                </div>
+            </div>
+        </div>
+        <!--right: ************右侧*********************** -->
+        <div id="rgt">
+            <!--title: ********************************************全文标题栏*************************************************** -->
+            <div id="title">
+                <div id="ttmain"><p>希森森林</p>
+                    <div id="subtitle">
+                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp--forest of sisen</p>
+                    </div>
+                </div> 
+                <div id="idolcubic">
+                    <div id="front"></div>
+                    <div id="back"></div>
+                    <div id="left"></div>
+                    <div id="right"></div>
+                    <div id="top"></div>
+                    <div id="bottom"></div>
+                </div>
+            </div>
+            <!--idol: *************************************************非我王菲********************************************** -->
+            <div id="idol">
+                <div id="text1">
+                    <p>非我王菲：</p>
+                </div>
+                <div id="idolsongs">
+                    <br><a href="https://y.qq.com/n/ryqq/songDetail/001NH5UK0mk4eq">人间、1997</a>
+                    <br><a href="https://y.qq.com/n/ryqq/songDetail/003KExF60zMMGK">匆匆那年、2014</a>
+                    <br><a href="https://y.qq.com/n/ryqq/songDetail/002JvB450vdkCr">流年、2001</a>
+                </div>
+                <div id="idolpictures">
+                    <img src="wangfei/4.1.jpg" alt="">
+                    <img src="wangfei/4.2.jpeg" alt="">
+                    <img src="wangfei/4.3.jpg" alt="">
+                    <img src="wangfei/4.4.gif" alt="">
+                    <img src="wangfei/4.5.png" alt="">
+                    <img src="wangfei/4.jpg" alt="">
+                    <img src="wangfei/4_副本.png" alt="">
+                </div>
+            </div>
+            <!--stock: ***********************************************资本风云：************************************************ -->
+            <div id="stock">                
+                <div id="text2">
+                    <p>资本风云：</p>
+                </div>
+                <div id="stkctt">
+                    <div class="text" style=" text-align:left; color:blueviolet;" > 
+                    <br>
+                    <h3>操作方式</h3>
+                    <br>不要碰亏损的股票，为了防止被套的太深！
+                    <br>下棋前好好想一下！
+                    <br>学会潜伏，因为风格总会切换的，——服装业的切换不就是一个粒子，以新疆棉花为转折点的潜伏；同时资金总是要套现的，但又不可能闲置，因此会有板块轮换；
+                    <br>相信自己的判断，一旦下手了，不要轻易的退出！
+                
+                    <h3><br>行情很好的时候:my opinion</h3>
+                    <br>行情很好的时候，可以追高，将止盈点可以设置为20%左右；
+                
+                    <h3><br>行情不好的时候:my opinion</h3>
+                    <br>设置的止盈点坚决不超过6%，也就是两天不超过3%——据我观察，不会连涨两天，而一个行业平均两天大涨不超过4%，但是自己不会吧这8%全部吃掉，所以设置止盈点6%.
+                    <br>可以做短线，做T，短线坚决止盈止亏——在震荡的时期，因为伴随着正弦波动，高低点切换做T也是可以赚钱的；
+                    <br>不要追逐热点，很容易被套——股市的风格切换的很快，很容易被套，在紫金矿业的2021追热点的时候，首先吃下了6%的浮盈，但是很快风格切换，接下来就是大亏。
+                    <br>如果硬要追逐热点的话，必须设立浮盈浮亏在3%以内，立刻撒手；
+                    <br>如果将短线做成了长线，那就做下去把，无所谓的；
+                
+                    <h3><br>公司的基本面以及近况分析</h3>
+                    <h4><br>立讯精密</h4>
+                    立讯精密在短时期内仍然是一家好公司，而且现在估值已经回归至合理水平，距离行业平均稍微高一点点；
+                    2021.5.14 立讯精密 下跌至32元左右 
+                    2021.5.29现在已经周六，在周一的时候发现立讯已经洗盘洗的差不多了，那时候在36了没进，没想到之后一路冲高没有回落，这次应该不会回落了，因为这次把筹码给出去就拿不回来了。
 
-
+                </div>
+            </div>
+            <!--link: **************************************************宝藏挖掘：********************************************* -->
+            <div id="link">                        
+                <div id="text3">
+                    <p>宝藏挖掘：</p>
+                </div>
+                <div id="linkcontent">
+                    <br><a href="market.html">市场</a>
+                    <br><a href="wangfei.html">王菲</a>
+                    <br><a href="https://cybermap.kaspersky.com/cn">地图</a>
+                    <br><a href="dairy.html">随笔</a>
+                </div>
+                <div id="endnote">
+                    <br>
+                    <br>起源：一个对于什么都爱，什么都不精的人，sisen，2021.5.29，南京航空航天大学；
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- javascript的修饰 -->
+    <script>
+        (function() {
+            var coreSocialistValues = ["行情逐渐明朗","寻找低价股潜伏", "中长线", "止盈"]
+              , index = Math.floor(Math.random() * coreSocialistValues.length);
+            document.body.addEventListener('click', function(e) {
+                if (e.target.tagName == 'A') {
+                    return;
+                }
+                var x = e.pageX   
+                  , y = e.pageY                
+                  , span = document.createElement('span');               
+                span.textContent = coreSocialistValues[index];              
+                index = (index + 1) % coreSocialistValues.length;//取模循环
+                span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
+                document.body.appendChild(span);
+                animate(span);
+            });
+            function animate(el) {//动画
+                var i = 0
+                  , top = parseInt(el.style.top)
+                  , id = setInterval(frame, 24);
+                function frame() {//帧
+        
+                    if (i > 180) {
+                        clearInterval(id);
+                        el.parentNode.removeChild(el);
+                    } else {
+                        i += 2;
+                        el.style.top = top - i + 'px';
+                        el.style.opacity = (180 - i) / 180;
+                    }
+                }
+            }
+        }());
+        </script>
 </body>
 </html>
