@@ -10,19 +10,49 @@
             margin: 0;
             padding: 0;
         }
-        #tst1{
-            background-color: seagreen;
-            width: 100px;
-            height: 100px;
-        }   
          </style>
 </head>
-<body>
-    <div id="tst" style="background-color: salmon;">
-        <div id="tst1" style="background-color: seagreen;">
-        </div>
-        <iframe src="market.html" frameborder="0" width=90% height=90%></iframe>
-    </div>
+<body>    <div id="page_begin_html">
+    <!-- 背景动画 -->
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="https://files.cnblogs.com/files/yzl0/canvas-nest.js" defer></script>
 
+<!-- 背景动画 -->
+<script>
+(function($){$.fn.snow=function(options){var $flake=$('<div id="flake" />').css({'position':'absolute','top':'-50px'}).html('&#10052;'),documentHeight=$(document).height(),documentWidth=$(document).width(),defaults={minSize:10,maxSize:20,newOn:500,flakeColor:"#FFFFFF"},options=$.extend({},defaults,options);var interval=setInterval(function(){var startPositionLeft=Math.random()*documentWidth-100,startOpacity=0.5+Math.random(),sizeFlake=options.minSize+Math.random()*options.maxSize,endPositionTop=documentHeight-40,endPositionLeft=startPositionLeft-100+Math.random()*200,durationFall=documentHeight*10+Math.random()*5000;$flake.clone().appendTo('body').css({left:startPositionLeft,opacity:startOpacity,'font-size':sizeFlake,color:options.flakeColor}).animate({top:endPositionTop,left:endPositionLeft,opacity:0.2},durationFall,'linear',function(){$(this).remove()});},options.newOn);};})(jQuery);
+$.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#FFF' });
+</script>
+
+<script type="text/javascript">
+/* 鼠标特效 */
+var a_idx = 0;
+jQuery(document).ready(function($) {
+$("body").click(function(e) {
+    var a = new Array("❤富强❤","❤民主❤","❤文明❤","❤和谐❤","❤自由❤","❤平等❤","❤公正❤","❤法治❤","❤爱国❤","❤敬业❤","❤诚信❤","❤友善❤");
+    var $i = $("<span></span>").text(a[a_idx]);
+    a_idx = (a_idx + 1) % a.length;
+    var x = e.pageX,
+    y = e.pageY;
+    $i.css({
+        "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+        "top": y - 20,
+        "left": x,
+        "position": "absolute",
+        "font-weight": "bold",
+        "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+    });
+    $("body").append($i);
+    $i.animate({
+        "top": y - 180,
+        "opacity": 0
+    },
+    1500,
+    function() {
+        $i.remove();
+    });
+});
+});
+</script>
+</div>
+<!--done-->
 </body>
 </html>

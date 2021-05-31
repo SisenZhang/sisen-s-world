@@ -13,6 +13,7 @@
         /*1两个部分：左右 ---------------------------------------------------*/
         #tot{
             display: flex;
+            background-color: rgba(17, 186, 238, 0.2);
         }
         #lft{
             width: 20vw;
@@ -20,8 +21,6 @@
         }   
         #rgt{
             flex: 1;
-            background-color:black;
-            background-color: rgba(12, 189, 233,0.5);
         } 
             /* 1.1-1.3----------------左侧部分---------------------------- */
             /* 1.1 couplet------------------------------------------------人生信条----------------------------------------------------- */
@@ -65,7 +64,8 @@
                             }
             /* 1.3 idea content-----------------------------------------------思维跳动---------------------------------------------------- */
                     #idea #ideactt{
-                        background:linear-gradient(rgba(11, 212, 11,0.5),rgba(238, 173, 184,0.5));
+                        background-color: rgba(0,0,0,0.2);
+                        /* background:linear-gradient(rgba(11, 212, 11,0.3),rgba(238, 173, 184,0.1)); */
                     }
             /*2.1-2.4 ---------------------右侧部分------------------ */
             #rgt div{
@@ -174,7 +174,10 @@
 
             /* idol  2.2-----------------------------------------------非我王菲------------------------------------------------ */
             #idol{
-                background-color: beige;
+                /* background:linear-gradient(rgba(2, 129, 2,1),rgba(255, 192, 203,1)); */
+                /* background-color: rgba(12, 189, 233,0.3); */
+                /* -webkit-mask:linear-gradient(rgba(0, 0, 0,1),rgba(0, 0, 0,0.5));  */
+                /* -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0) 100% ); */
                 display: flex;
                 position: relative;
             }
@@ -199,7 +202,7 @@
                         flex: 1;
                         /* background-color:rgba(red, green, blue, alpha); */
                         /* background-color: rgba(0,0,0,0.5); */
-                        -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0) 100% );
+                        -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0.1) 100% );
                         float: left;
                     }
                             #idol #idolpictures img{
@@ -225,7 +228,8 @@
             #link{
                 display: flex;
                 justify-content: space-between;
-                background-color: rgba(0,0,0,0.5);
+                /* background-color: rgba(0,0,0,0.5); */
+                background:linear-gradient(rgba(11, 212, 11,0.3),rgba(238, 173, 184,0.1)); 
                 position: relative;
             }
                     #link  #text3{               
@@ -244,6 +248,10 @@
                         background-color:springgreen;
                         background-image: url("bkg/桥.jpg");
                         background-size: 100% 100%;
+                    }
+                    #link #linkcontent a{
+                        text-decoration:none;
+                        color: rgba(0,0,0,0.5);
                     }
                     #link #endnote{
                         flex: 1;
@@ -282,9 +290,11 @@
                 </div>
             <!--idea content: ********************************************思维跳动*************************************************** -->                    
                 <div id="ideactt">
-                    <br> 将进酒：君不见黄河之水天上来，奔流到海不复回！
-                    <br>idea
-                    <br>idea
+                    <br> 将进酒：君不见黄河之水天上来，奔流到海不复回！君不见高堂明镜悲白发，朝如青丝暮成雪！人生得意须尽欢，莫使金樽空对月！天生我材必有用，千金散尽还复来！
+                    烹羊宰牛且为乐，会须一饮三杯被！岑夫子丹丘生，将进酒杯莫停！与君歌一曲，请君为我倾耳听；钟鼓馔玉不足贵，但愿长醉不复醒；古来圣贤皆寂寞，惟有饮者留其名；
+                    陈王昔时宴平乐，斗酒十千恣欢谑；主人何为言少钱，径须沽取对君酌；五花马、千金裘。呼儿抢出换美酒，与尔同销万古愁。
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
@@ -334,28 +344,54 @@
                 <div id="stkctt">
                     <div class="text" style=" text-align:left; color:blueviolet;" > 
                     <br>
-                    <h3>操作方式</h3>
+                    <h3>操作方式：</h3>
                     <br>不要碰亏损的股票，为了防止被套的太深！
                     <br>下棋前好好想一下！
                     <br>学会潜伏，因为风格总会切换的，——服装业的切换不就是一个粒子，以新疆棉花为转折点的潜伏；同时资金总是要套现的，但又不可能闲置，因此会有板块轮换；
                     <br>相信自己的判断，一旦下手了，不要轻易的退出！
-                
-                    <h3><br>行情很好的时候:my opinion</h3>
+                    <br>人民币升值对进口企业利好，因为进口成本下降；对出口企业利空，因为是用美元结算的，量不变，美元却贬值了。
+
+
+                    <h3 style="color: red;">近期操作要点：</h3>
+                    周期行业等待中报出炉，应该会较高；然后换手；近期处在低点，不用太过担心。
+                    铁矿：2021四月：进口9000万吨，生铁生产7500万吨，
+
+                    <br>美年健康，
+                        <br>处于低点，
+                        <br>2021.5.26拉升了一次，之后回调两天，洗盘；目前股价低于平均水平，这波儿洗盘就是最后一次了。
+                        <br>
+                    <br>宝钢股份：
+                        <br>处于低点，
+                        <br>周期产业，近年来
+                        <br>钢铁行业触底反弹，但是其存在上涨逻辑，并且
+                    <br>伊利股份：
+                        <br>不高不低，
+                    <br>立讯精密：
+                        <br>低位回调，
+                    <br>航发动力：
+                        <br>持续上攻；
+
+
+                    <h3><br>行情好的时候:my opinion</h3>
                     <br>行情很好的时候，可以追高，将止盈点可以设置为20%左右；
-                
+                    <br>
+
                     <h3><br>行情不好的时候:my opinion</h3>
                     <br>设置的止盈点坚决不超过6%，也就是两天不超过3%——据我观察，不会连涨两天，而一个行业平均两天大涨不超过4%，但是自己不会吧这8%全部吃掉，所以设置止盈点6%.
                     <br>可以做短线，做T，短线坚决止盈止亏——在震荡的时期，因为伴随着正弦波动，高低点切换做T也是可以赚钱的；
                     <br>不要追逐热点，很容易被套——股市的风格切换的很快，很容易被套，在紫金矿业的2021追热点的时候，首先吃下了6%的浮盈，但是很快风格切换，接下来就是大亏。
                     <br>如果硬要追逐热点的话，必须设立浮盈浮亏在3%以内，立刻撒手；
                     <br>如果将短线做成了长线，那就做下去把，无所谓的；
+                    <br>行情不好的时候是机会来临的时候，震荡行情抄底总比行情反转后追高好，所以要用基金抄确定性强的行业。比如2021.5月25日的一次大涨，才让自己看清反转的到来，
+                    然而实际上行情早已经缓步上升到了去年的高点。白酒除了茅台都到了高点，新能源/医药/几乎都回到了高点附近。
                 
-                    <h3><br>公司的基本面以及近况分析</h3>
+                    <h3><br>公司的基本面</h3>
                     <h4><br>立讯精密</h4>
                     立讯精密在短时期内仍然是一家好公司，而且现在估值已经回归至合理水平，距离行业平均稍微高一点点；
                     2021.5.14 立讯精密 下跌至32元左右 
                     2021.5.29现在已经周六，在周一的时候发现立讯已经洗盘洗的差不多了，那时候在36了没进，没想到之后一路冲高没有回落，这次应该不会回落了，因为这次把筹码给出去就拿不回来了。
-
+                    2021.5.31周一开盘，立讯精密小幅回撤两日；
+                    </div>
                 </div>
             </div>
             <!--link: **************************************************宝藏挖掘：********************************************* -->
@@ -379,7 +415,7 @@
     <!-- javascript的修饰 -->
     <script>
         (function() {
-            var coreSocialistValues = ["行情逐渐明朗","寻找低价股潜伏", "中长线", "止盈"]
+            var coreSocialistValues = ["帅哥里好啊","小姐姐里好啊","行情逐渐明朗","寻找低价股潜伏", "中长线", "止盈"]
               , index = Math.floor(Math.random() * coreSocialistValues.length);
             document.body.addEventListener('click', function(e) {
                 if (e.target.tagName == 'A') {
@@ -390,7 +426,7 @@
                   , span = document.createElement('span');               
                 span.textContent = coreSocialistValues[index];              
                 index = (index + 1) % coreSocialistValues.length;//取模循环
-                span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
+                span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color:#15F111; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
                 document.body.appendChild(span);
                 animate(span);
             });
@@ -412,5 +448,6 @@
             }
         }());
         </script>
+    
 </body>
 </html>
