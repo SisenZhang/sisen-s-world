@@ -1,0 +1,4 @@
+操作：
+git commit -m "content"
+git add .
+git push
