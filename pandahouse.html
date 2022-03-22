@@ -1,0 +1,371 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pandahouse</title>
+    <style>
+        *{
+        padding: 0px;
+        margin: 0px;
+        }
+        h1{font-size: 1.5em; font-weight: 600; margin: 2px; padding:0; border: 0ch; }
+        h2{font-size: 1.3em; font-weight: 500; margin-top: 0.2em; margin-bottom: 0.2em; margin-left: 1em;}
+        h3{font-size: 1.1em; font-weight: 600; margin-top: 0.2em; margin-bottom: 0.2em; margin-left: 1em;}
+        #title{
+            height: 12vh;
+            width: 100vw;
+            /* font-style:italic; */
+            text-align:center;
+            font-weight: bold;
+            font-size: 1.5em;
+            background-color: rgb(125, 122, 128);
+            /* background-image: url("bkg/桥水.jpg"); */
+            margin-bottom: 0px;
+            
+        }
+        #intro{
+            height: 22vh;
+            width: 100vw;
+            display: flex;
+            background-color: rgb(155, 155, 144);
+        }
+            #intro #text0{
+                width: 67%;
+                font-style:italic;
+                font-size: 0.8em;
+            }
+            #intro #date{
+                width: 33%;
+                font-size: 1.5em;
+                font-weight: bold;
+                font-style: inherit;
+                text-align: center;
+            }
+        #extraIntro{
+            display: flex;
+        }
+            #market{
+                height: 100vh;
+                width: 33vw;
+                background-color: rgb(170, 89, 96);
+            }   
+                #priceboard{
+                    height:55vh;
+                    width: 100%;
+                    overflow: scroll;
+                }
+                #priceboardlink{
+                    text-align: right;
+                }
+            #houseLiuZhang{
+                height: auto;
+                width: 67vw;
+                /* flex: 1; */
+                background-color: rgb(236, 252, 144);
+                display: flex;
+            }
+                #present{
+                    height: 100%;
+                    width: 67%;
+                    background-color: rgb(123, 123, 139);
+                }
+                    #wallet{
+                        height: 7em;
+                        width: 100%;
+                        /* background-color: cadetblue; */
+                    }
+                        #wTitle{
+                            width: 100%;
+                            height: auto;
+                            /* font-size: 1.1em;
+                            font-weight: 600; 
+                            margin-top: 0.2em; 
+                            margin-bottom: 0.2em; 
+                            margin-left: 1em; */
+                            background-color: yellow;
+                        }
+                        #extraWTitle{
+                            height: 18%;
+                            width: 100%;
+                            display: flex;
+                        }
+                            #wP1{
+                                width: 50%;
+                            }
+                            #wP2{
+                                width: 50%;
+                            }
+                    #taskboard{
+                        height: 67%;
+                        width: 100%;
+                        /* background-color: bisque; */
+                    }
+                        #tbTitle{
+                            height: auto;
+                            width: 100%;
+                            /* font-size: 1.1em;
+                            font-weight: 600; 
+                            margin-top: 0.2em; 
+                            margin-bottom: 0.2em; 
+                            margin-left: 1em; */
+                            background-color: yellow;
+                        }
+                        #extraTbTitle{
+                            height: 52%;
+                            width: 100%;
+                            display: flex;
+                        }
+                            #tbP1{
+                                width: 50%;
+                            }
+                            #tbP2{
+                                width: 50%;
+                            }
+                #memorycard{
+                    height: 100%;
+                    width: 33%;
+                    background-color: aquamarine;
+                }
+    </style>
+</head>
+<body>
+<div id="tot">
+    <!--title: ********************************************title*************************************************** -->
+    <div id="title">
+        <br>WELCOME TO PANDA HOUSE!
+    </div>
+    <!--extra Title: ********************************************extra-title*************************************************** -->
+    <div id="extraTitle">
+        <!--introduction: ********************************************introduction*************************************************** -->
+        <div id="intro">
+            <div id="text0">
+                <br>---------------------------------------------------------------------------------------------------------------------------------
+                <br>---熊猫币交易系统创始人:刘若瑾，张祥；                                                           
+                <br>---创始时间:2022.3.22；                                                          
+                <br>---基本规则:在双方合理约定出市场价格后，完成布置的任务，获取熊猫币，每周期进行一次清算,熊猫币可用来进行相应交易；
+                <br>---币圈展望:①可发展出投资机制，如将“这个月我可以跑100公里”打包作为一个交易对象，进行对赌协议，或者做空做多等；
+                <br>---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;②人数上升的情况下发展为一款游戏，或者是成熟软件；
+                <br>---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;③可以开设房间，进行私下的存量交易。
+                <br>---&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;④将熊猫币和人民币进行绑定，采用浮动汇率。
+                <br>---------------------------------------------------------------------------------------------------------------------------------
+            </div>
+            <div id="date">
+                <br>date:2022年3月
+                <br>cycle：1st          
+            </div>
+        </div>
+        <!--extra_introduction: ********************************************extra_introduction*************************************************** -->
+        <div id="extraIntro">
+            <!--market: ********************************************market*************************************************** -->
+            <div id="market">
+                <h2 style="text-align: center; margin: 0.2em;">Market</h2>
+                <h3>市场简介:</h3>
+                    目前市场为增量市场(系统有权限进行熊猫币的印发)，每个人可做任务赚取相应熊猫币，也可完成其他人布置的任务。
+                <h3>交易规则:</h3>
+                    诚实守信，公平自愿。
+                    <br>规定时间完成任务可获得相应熊猫币，失败根据相应条款进行赔偿，或损失，或未得到奖励。
+                    <br>每个周期进行一次清算，目前暂定一次周期为1月。
+                    <h3>价格指示牌:</h3>
+                    <div id="priceboardlink">
+                        <a href="pandahouselink/priceboard.html">price board</a>
+                    <div id="priceboard">
+                        <table style="border: 0; width:auto; font-size: 0.5em; text-align: center; width: 100%;">
+                            <tr>
+                                <th>序号</th>
+                                <th>商品</th>
+                                <th>赚钱</th>
+                                <th>赔偿</th>
+                                <th>损失</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>一篇日记(每日两点前完成)</td>
+                                <td>1.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>.</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                                <td>0.00 pandacoin</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--house: ********************************************house*************************************************** -->
+            <div id="houseLiuZhang">
+                <div id="present"> <!--包含wallet和taskboard的block-->
+                    <h2 style="text-align: center; margin: 0.2em;">present stage</h2>
+                    <div id="wallet">
+                        <div id="wTitle">
+                            <h3>Wallet:</h3>
+                        </div>
+                        <div id="extraWTitle">
+                            <div id="wP1">
+                                刘若瑾当前熊猫币:
+                                <br>0.00 pandacoin
+                            </div>
+                            <div id="wP2">
+                                张祥当前熊猫币:
+                                <br>0.00 pandacoin
+                            </div>
+                        </div>
+                    </div>
+                    <div id="taskboard">
+                        <div id="tbTitle">
+                            <h3>TaskBoard:</h3>
+                        </div>
+                        <div id="extraTbTitle">
+                            <div id="tbP1">
+                                刘若瑾当前任务:
+                                <table style="font-size: 00.8em; text-align: center; width: 80%; background-color: rgb(233, 164, 164);">
+                                    <tr>
+                                        <th>task</th>
+                                        <th>result</th>
+                                    </tr>
+                                    <tr>
+                                        <td>一篇日记(每日两点前完成)</td>
+                                        <td>0.00</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div id="tbP2">
+                                张祥当前任务:
+                                <table style="font-size: 00.8em; text-align: center; width: 80%; background-color: rgb(167, 210, 228);">
+                                    <tr>
+                                        <th>task</th>
+                                        <th>result</th>
+                                    </tr>
+                                    <tr>
+                                        <td>一篇日记(每日两点前完成)</td>
+                                        <td>0.00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="memorycard">
+                    <h2 style="text-align: center; margin: 0.2em;">Memorycard:</h3>
+                        <div id="historylink">
+                            <a href="pandahouselink/history.html">LiuZhang历史任务及所得</a>
+                        </div>
+                    <h3>历史周期记录：</h3>
+                    2022年3月，cycle1，为期一周
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script langauge='javascript'>
+    function clock()
+    {
+    strTime = new Date();
+    }
+</script>
+</html>

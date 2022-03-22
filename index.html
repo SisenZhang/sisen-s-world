@@ -44,9 +44,6 @@
                     text-align: center;
 
                 }
-            #idea{
-                /* background: linear-gradient(green,pink); */
-            }
             /* 1.2 earth-----------------------------------------------人生位置---------------------------------------------------- */
                     #earth{
                         height:20vw;
@@ -172,7 +169,39 @@
                         right: -2em;
                         top: 1em;
                     }
-
+            /* idol  2.12-----------------------------------------------熊猫币圈------------------------------------------------ */
+            #panda{
+                display: flex;
+                position: relative;
+            }
+                    #panda #text0{               
+                                height: 10vh;
+                                /* background-color: red; */
+                                position: absolute;                        
+                                left: 100px;
+                                font-size: 1.3em;                                
+                                line-height: 10vh;
+                                font-weight: bold;
+                            }
+                    #panda #pandaindex{
+                        /* flex: 1; */
+                        position: absolute;
+                        left: 100px;
+                        top: 10vh;
+                        /* background-color:aqua; */
+                        z-index: 9999;
+                    }
+                    #panda #pandapictures{
+                        flex: 1;
+                        /* background-color:rgba(red, green, blue, alpha); */
+                        /* background-color: rgba(0,0,0,0.5); */
+                        -webkit-mask: linear-gradient(rgba(211, 7, 7, 0.5) 30%,rgba(194, 28, 28, 0.1) 100% );
+                        float: left;
+                    }
+                            #panda #pandapictures img{
+                                width:auto ;
+                                height: 10vw;
+                            }
             /* idol  2.2-----------------------------------------------非我王菲------------------------------------------------ */
             #idol{
                 /* background:linear-gradient(rgba(2, 129, 2,1),rgba(255, 192, 203,1)); */
@@ -265,6 +294,7 @@
                     }
     </style>
 </head>
+
 <!-- 正文： -->
 <body>
     <div id="tot" id="jsi-snow-container" class="container" style="z-index: 100000">
@@ -317,6 +347,23 @@
                     <div id="bottom"></div>
                 </div>
             </div>
+            <!--stock: ***********************************************熊猫币圈：************************************************ -->
+            <div id="panda">
+                <div id="text0">
+                    <p>PANDA HOUSE：</p>
+                </div>
+                <div id="pandaindex">
+                    <br><a href="pandahouse.html">熊猫币圈乐园</a>
+                    <br>we need a pandacoin(熊猫币) logo.
+                </div>
+                <div id="pandapictures">
+                    <img src="picture/panda/panda1.jpg" alt="">
+                    <img src="picture/panda/panda2.jpg" alt="">
+                    <img src="picture/panda/panda3.jpg" alt="">
+                    <img src="picture/panda/panda4.jpg" alt="">
+                </div>
+
+            </div>
             <!--idol: *************************************************非我王菲********************************************** -->
             <div id="idol">
                 <div id="text1">
@@ -328,13 +375,13 @@
                     <br><a href="https://y.qq.com/n/ryqq/songDetail/002JvB450vdkCr">流年、2001</a>
                 </div>
                 <div id="idolpictures">
-                    <img src="wangfei/4.1.jpg" alt="">
-                    <img src="wangfei/4.2.jpeg" alt="">
-                    <img src="wangfei/4.3.jpg" alt="">
-                    <img src="wangfei/4.4.gif" alt="">
-                    <img src="wangfei/4.5.png" alt="">
-                    <img src="wangfei/4.jpg" alt="">
-                    <img src="wangfei/4_副本.png" alt="">
+                    <img src="picture/wangfei/4.1.jpg" alt="">
+                    <img src="picture/wangfei/4.2.jpeg" alt="">
+                    <img src="picture/wangfei/4.3.jpg" alt="">
+                    <img src="picture/wangfei/4.4.gif" alt="">
+                    <img src="picture/wangfei/4.5.png" alt="">
+                    <img src="picture/wangfei/4.jpg" alt="">
+                    <img src="picture/wangfei/4_副本.png" alt="">
                 </div>
             </div>
             <!--stock: ***********************************************资本风云：************************************************ -->
