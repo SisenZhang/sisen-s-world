@@ -4,3 +4,11 @@
 git commit -m "content"
 git add .
 git push
+
+css为css网页修饰文件；
+font
+js为网页修饰文件；
+pandahouselink为pandahouse的链接；
+picture为所用图片，包含background、主页、pandahouse所用；
+studyPackage为我的初始学习包；
+homepagelink为主页的部分链接；
