@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmlstudy</title>
+    <style>p{color:red;}</style><!--还是在html中写修饰，不过是在head中写-->
+    <link rel="stylesheet" href="demo1.css"><!--采用外链的方式，在css中写修饰-->
+</head>
+<body>
+    标签：(要用尖括号括起来)
+        标题h 双标签；段落p 双标签；
+        <p width="20px"></p> 
+        img图片 单标签；src是路径，包含绝对路径、相对路径和网站路径
+        a超链接 双标签：包含绝对路径、相对路径和网站路径，锚点（），邮件，电话，弹框；
+        <p></p>
+        <img src="http://www.xinhuanet.com/photo/2021-05/05/1127409742_16201840676341n.jpg" width="300">;
+        <p></p>
+        <a href="http://www.xinhuanet.com/photo/2021-05/05/1127409742_16201840676341n.jpg">jump to photo</a>
+        <p></p>
+        <a href="http://www.baidu.com">jump to new web</a> 
+    列表：
+        <ul>无序列表</ul>
+        <ol type="1" start="4">有序列表</ul>
+        自定义列表：
+    div:划分区域；
+    span：
+    
+    文本修饰标签：
+       b加粗  em strong强调 i倾斜 del删除;
+       hr水平分割线 br换行
+    文本：
+    八号＝5磅(5pt) ==(5/72)*96=6.67 =6px
+    七号＝5.5磅 ==(5.5/72)*96=7.3 =7px
+    小六＝6.5磅 ==(6.5/72)*96=8.67 =8px
+    六号＝7.5磅 ==(7.5/72)*96=10px
+    小五＝9磅 ==(9/72)*96=12px
+    五号＝10.5磅 ==(10.5/72)*96=14px
+    小四＝12磅 ==(12/72)*96=16px
+    四号＝14磅 ==(14/72)*96=18.67 =18px
+    小三＝15磅 ==(15/72)*96=20px
+    三号＝16磅 ==(16/72)*96=21.3 =21px
+    小二＝18磅 ==(18/72)*96=24px
+
+    iframe：内嵌窗口（里面再放一个页面）   广告页面、  后台管理系统；
+        src="";src 链接到的地址URl
+        scrolling="no或auto"是否有滚动条
+        width
+        height
+        allowtransparency 背景是否透明
+        frameborder="0或1",是否显示边框
+        vspace y方向显示的区域，负值为从目标网页最上面开始截取的部分，正值为y值+从上部开始内容区域
+        hsapce x方向显示的区域，负值为从目标网页左侧开始截图的部分，正值为x值+从左侧开始内如区域
+        name 命名 和a配合：
+        
+        <p></p>
+        <iframe src="http://www.baidu.com" width="400" height="400" ></iframe>
+        <p></p>
+        <a href="http://www.baidu.com" target="win">页面1</a>
+        <a href="https://uland.taobao.com" target="win">页面2</a>
+        <p></p>
+        <iframe name="win" src="" width="800" height="400" scrolling="auto" frameborder="1" ></iframe>
+
+    注释：<!--    -->
+
+    表格：
+        <table border="" width="" cellspacing="10" bgcolor="green">
+            <tr align="center" width="10">
+                <th>name</th>
+                <th>friends</th>
+            </tr>
+            <tr>
+                <td>Miss.Liu</td>
+                <td>yeah</td>
+            </tr>
+            <tr>
+                <td>Miss.Li</td>
+                <td>no</td>
+            </tr>
+        </table>
+
+        表单：给后台发送数据
+        <p></p>
+        <form action="http://www.baidu.com" method="GET">
+            <!--后台就是www.baidu.com，将上面的内容传输过去，那么怎么将内容传输给我的邮箱呢-->
+            <label for="i1">username:</label><input id="i1" type="text" name="username"><!--label是将几个字符化为一个整体-->
+            password:<input type="password" name="password">
+            <input type="submit" value="登录喽">   <!--默认是submit--> 
+            <input type="reset" value="重置哦">
+            man: <input type="radio" name="sex">
+            girl:<input type="radio" name="sex">
+            篮球： <input type="checkbox">
+            <input type="file">
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <select name="" id="">
+                <option value="">html</option>
+                <option value="">css</option>                
+            </select>
+            <button type="submit">submitbutton</button>
+        </form>
+
+        标签：
+        <span>我要换行</span>
+        <br>
+        <span>我要换行</span>
+        <hr>
+        实体字符：
+            空格： &nbsp;             
+            Tab    &#9;
+            &lt; &gt;&copy;
+
+        html5的标签:
+             结构化标签：
+               <header></header>代替了<div id="header"></div>
+               <section></section>
+               <section></section>
+               <footer></footer>
+               <nav></nav> <!--导航-->
+              抵制div+css，其实和div作用相同，不过是更加的语义化，增加了可读性；
+            功能化标签：
+                <canvas style="background:black" width="800" height="800"></canvas>
+                <audio src="wangfei/王菲 - 人间 (Live).mp3">听个人间</audio>
+               
+        css的使用：
+             第一种：<p style="color:red;">aaaaaaa</p>
+                   给所有的p都加上了；
+             第二种：head中写上style，<style>p{color:red;}</style>，添加样式给所有的p标签了：
+             第三种：链接，<link rel="stylesheet" href="demo1.css">，在demo1中放置渲染的标签；
+                    demo1.css：    <style>p{color:red;}</style>
+             第四种：@important'路径';
+                      1. 在demo1.css中放置一个style，然后在head之中@important'路径';
+                      2. 在dem2.css中放置一个style，然后在dem1.css中放置一个引用,@important'demo2.css';在head之中<link rel="stylesheet" href="demo1">
+
+             选择器：
+                 id选择：<p id="p1"></p>
+                     在head中仅仅设置<style>#p1{color:red;}</style>
+                 类选择器：<p class="q1"></p>
+                      在head中仅仅设置<style>.q1{color:red;}</style>
+                 属性选择器：<p class="q1"></p>
+                      在head中仅仅设置<style>[class]{color:red;}</style>
+                      在head中仅仅设置<style>[class="q1"]{color:red;}</style>
+                 属性选择器：<p title="q1"></p>
+                      在head中仅仅设置<style>[title]{color:rgb(124, 71, 71);}</style>     
+                 父子级选择器：<p id="p1">黄棕色</p>  <div class="p1">黑色</div> <p id="p2">黄棕色</p>  <div>黑色</div>
+                      <style> 
+                        p{color: rgb(124, 71, 71);}
+                        p,div{color: royalblue;}
+                        或者 .p1{color: royalblue;}
+                        或者 id.p1{color: royalblue;}                        
+                      </style>
+                选择权重器：！important>id选择器>类选择器,属性选择器>标签选择器，>通配符选择器；
+                       
+    P19集：文字样式,这些可以放在style中，也可以直接放在标签里面；
+            <font-size>文本大小</font-size>
+            <font-family></font-family>
+            <font-weight：weight></font-weight>           
+            <font-weight：bold>粗体，正常</font-weight>           
+            <font-style：italic>倾斜italic 正常normal</font-weight>           
+            <color:red></font-weight>     
+            <h4 font-size="16" fo    nt-family="" font-weight="500" font-style="italic" color="red">文字样式</h4>
+    P20：文本样式
+        文本对齐，text-align:对齐方式，left，right，center,justify
+        文本行高：line-height：30px
+            文本垂直水平居中：line-align:center
+                              line-height:物体的高度
+        文本下划线：text-decoration:
+             underline,line-through,over-line,none(没有效果，去除a标签的下划线)；后面可以加下划线的颜色（比如#db406c）
+
+    
+
+    
+    p21宽高 和边框：
+        width:
+        height:
+        边框（border）:宽度（1px） 类型(dashed，solid) 颜色（red）  
+              border-top（上边框）（left，right，top,bottom）
+              boder-style;border-color;
+    p22:背景：
+        width:
+        height:
+        background-color：blue；
+        background-image:url="路径"；（默认重复）
+        background-repeat：repeat-x；repeat-x；no-repeat；
+        background-position：left、top、right、bottom； 或left bottom等； 或位置20px 30px；
+        可以做雪碧图（精灵图），显示图片的局部；
+        background：color url（） no-repeat 0px 10px;
+
+    盒子模型：
+        第一层：内容大小width 和 height
+        第二层：边框宽度border 
+        第三层：padding
+        第四层：margin  可以分边更改：margin：10px 20px或者margin：10px 20px  30px ；margin：10px 20px 30px 40px； 
+            margin：0 auto（表示居中）； 
+        存在默认值；
+        去掉这些：
+        采用通配符去掉:在style中写：<style>margin：0px；padding：0px</style>
+    p24:标签分类
+        block        块级标签（p，div，h），独占一行,  能设置宽高，   用在结构上， 可以设置margin，   
+        inline       行内标签, 不独占一行，不能设置宽高，用在内容上，  不可以设置margin，
+        inline-block 行内块，image，
+        可以互相转化：display：inline(block)，inline-block;在head中设置style；
+    
+    p25-26-27：浮动布局：    
+        float: left;
+        标准文档流：按照标签的特性 正常排列，与常理相同；
+        浮动文档流：
+            作用：文字浮动，换行失效；改变类型，将inline可能改成block，
+            应用：文本环绕，
+                  浮动布局，让元素变成一行；
+                  利用margin调整距离；
+            出现的问题：父级浮动，子集跟进了，但是不需要；（清楚父级的浮动）  
+            清除浮动：
+                1.清楚之后内容的；清除的必须是块，可以分为clear：left，（right）（both）。比如可以清除. clearfix（浮动流）的both，或者浮动流后一个的clear：right； 
+                2.利用父级添加的clearfix，结合伪元素.clearfix:after{clear：left}进行清楚；
+                BFC：把周围的格式标准化；
+                    position：absolute；
+                    display：inline-block；
+                    float：left；
+                    overflow：hidden（溢出隐藏）
+        标签引用可以直接用：标签（类要加点，id加# ；一个标签可以属于多个类；套娃可以这样 h1>left>left1(h1 left left1),比如 <h1 id="h1" class="left left1"></h1>）
+        定宽浮动布局：margin：0 auto;css2的布局方式；
+
+    p25. 2伪元素：
+        标签（p）：after（before）｛content：'你是猪,必须要写，可以为空'； background：red； display：block；width：10px； ｝  在style中设置伪元素的方法
+        应用：在元素前后添加内容或者更改元素；比如给浮动元素设置class="clearfix";然后在style中设置. clearfix：after{ clear : both}
+    p26. 伪元素伪类
+    :link（未访问时）  :hover（鼠标在其上时候） :active(点的一瞬间) :vistied（访问完之后）
+    如果添加效果图，如a:link{color:red;} a:hover{color:red;}   需要按照lvha的顺序写；
+    style="text-decoration:none"
+
+    p27定位：
+        相对定位：position：relative； left：10px； bottom：10px； 相对于原来的位置定位；        在正常文档流中偏移位置;   给绝对定位做父级；
+        绝对定位：position：absolute； left:10px; bottom:10px;     相对于父级定位的，           将对象从文档流中拖出;     固定小图标，运动；（绝对不能用作布局）
+        固定定位：position：fixed；left:10px; bottom:10px;         相对于body，即相对于可视区域； 广告；
+                position:relative和position：absolute是可以套用的：
+                div position:relative
+                div div position：absolute相对于上一个
+                div div div position：absolute相对于上一个
+    p28：布局
+       两列布局：一列定宽，一列自适应；
+       双飞翼布局（圣杯布局） 一列定宽，
+    p29:文本居中与块的剧中
+        文本居中：
+                text-align:center;
+                text-align:center;
+        文本框剧中：
+           p{
+               border：solid；
+               position：absolute；
+               left：50%;
+               top:50%;
+               margin-left:-宽度的一半；
+               margin-top：-高度的一般；
+           }
+       图片后文字的剧中：
+       img{vertical-align:bottom(middle,top);}
+           <img src="" alt="">
+           aaaaaaa
+    p31:overflow的用法：
+        overflow：hidden溢出隐藏；
+                  scroll滚动条；
+                  auto自动；
+                  visible默认的可见；
+    p32：display：
+        display：none；隐藏；隐藏后别的元素可以用他的位置；
+        visibility：hidden；隐藏；别的元素不可以用它的位置；
+    p33:单行文本溢出后省略：
+        write-space:nowrap;强制不换行；
+        overflow：hidden溢出隐藏；
+        text-overflow:ellipsis;文本溢出省略；
+    p35：css3的选择器
+        css3几乎不兼容IE9以下；
+        选择器1 ~选择器 ：选中元素1之后的所有；
+        选择器1 +选择器 ：选中元素1之后的一个；
+        [属性名]{}
+        [属性名='属性值']{}
+        [属性名^='属性值']{}
+        [属性名*='属性值']{}
+        [属性名$='属性值']{}
+        特殊的css3选择器：https://www.bilibili.com/video/BV1ZA41147eE?p=36；
+        p:nth-of-type{}
+        :nth-child(n或者2n+1){}
+        :last-child
+        :first-child
+        :last-of-type{}
+        :first-of-child{}
+        :only-child{}只有一个子集的；
+        :only-of-type｛｝
+        :checked
+
+        表单：
+        ：checked
+        ：disabled
+        ：enable
+        ：：placeholder提示文字；
+        value
+        ：not（）反选；
+        p::selection｛｝选中的东西改变效果
+        ：：first-letter｛｝
+        ：：first-line{}
+    p36:border
+        border-radius：10px  倒圆角
+        border-radius:10px 或者10px 20px 或者 10px 20px 30px 或者 10px 20px 30px 40px或者10px 20px 30px 40px/10px 20px 30px 40px;
+        box-shadow：10px 20px 30px 40px 50px #000 inset
+            盒子阴影：x轴偏移 y轴偏移 阴影模糊度 阴影扩展半径 阴影颜色 投影方式（inset内投影，默认是外）；x轴偏移 y轴偏移...可叠加；
+        div:hover{}将鼠标放在其上的时候的效果；
+         ex:div:hover{box-shadow：10px 20px 30px 40px 50px #000 inset}
+    p37：背景
+        css2的：
+         background-images
+         background-position
+         background-color
+         background-repeat
+        css3的：
+         background-size：100% 或者100% 100% 按照x轴铺满或者变形用一个图片铺满；
+         background：contain 按照长的铺满；
+         background：cover 按照短的放缩，其余截取；
+        background-clip 剪裁背景
+         content-box 从内容开始剪裁
+         padding-box 从padding开始剪裁
+         border-box 从边框开始剪裁
+        background-origin
+         content-box 从内容开始显示
+         padding-box 从padding开始显示
+         border-box 从边框开始显示
+        background：url（） no repeat x y,url（） no repeat x y, ...
+         多背景图;
+    p38:过渡：
+        transition：width(height/all) 300px  3s   linear或ease、ease-in/ease-out/ease-in-out/贝塞尔曲线（F12查看copy函数）  0.3ms；
+                    结果                     时间  速度效果                                                             延迟时间
+    p39:透明度
+        opacity：全透明；
+        css3中：rgba（0，0，0，0.3） 部分透明；
+    p42:
+         阿里巴巴矢量图；icontfont
+         收藏矢量图，下载代码，引用即可；
+    p43：变形
+        transform
+           旋转：transform：rotate（45deg）可以叠加div：hover{}，制做动画
+                           scale（0、-1、-2 -1）
+                           translate（20px,30px）
+                           skew(20deg,30deg)
+                多个一起的话transform：translate（20px,30px） skew(20deg,30deg);
+    p44：3D
+        transform:rotateX(30deg)
+                  景深：perspective（800px-1000px为宜）
+        transform-style：preserve-3d；3D空间；才能让平面在三维空间中移动并显示；
+           立体图；立体图的旋转；
+        @keyframe move{from to 或者 20% 50% 80%或者 from  to } 
+        animation:动画
+          动画的名称 时间 次数（infinate） 效果（linear） 等待的时间（3s） 最终的效果（默认复原，forwards） 
+    p47：渐变色；
+        线性渐变： linear-gradient(color1,color2)；
+           范围： linear-gradient(color1 20%,color2 50%)；
+                  linear-gradient(color1 10px,color2 40px)；
+           多色彩线性渐变：line-gradient（color1 20%,color2 50%,color1 100%）；
+           角度： linear-gradient(30deg,color1 20%,color2 50%)；
+                  不兼容的写法：-webkit-line-gradient(top left,color1 20%,color2 50%)；
+            重复：repeat-linear-gardient(red 10px ,blue 20px); 
+        圆形渐变：background:-webkit-radial-gradient(yellow,pink,green);
+           位置：-webkit-radial-gradient(yellow,pink,green);
+    p48:蒙版
+        -webkit-mask:
+        透明的地方裁剪：
+            全透明的则全部裁剪；不透明的则全保留；半透明的则部分保留；
+            利用渐变可以得到透明的渐变；
+        文字蒙版：
+        -webkit-background-clip:text;
+        图片的影像：
+        -webkit-box-reflect:below(top) 4px linear-gradient(rgba(0,0,0,1)，rgba(0,0,0,0))；
+    p50:
+        自适应：
+            1.百分比；
+            2.新增的盒子模型；
+            3.公式calc（）注意空格；
+            4.弹性布局：弹性盒子 flex布局；
+             父级加：display：flex；代替浮动；
+                    flex-direction:row或column或row-reverse 改变排列方向
+                    justify-content：子元素横方向排列：flex-start左排列，flex-end右排列，center剧中；space-between；space-around;
+                    align-items：子元素纵方向排列：flex-start左排列，flex-end右排列，center剧中；space-between；space-around;
+                    子元素换行： align-content:nowrap;wrap;wrap-reverse;
+             子集加：
+                占满父级：flex：1；（分的份数）
+                    用法：父级：width：100%；height 100%; display:flex;
+                        子级1：width：10px； height 100% ；子集2：height 100%; flex：1；
+                        子级1：width：2 ；height 100% ；子集2：height 100%; flex：1；
+                    青蛙游戏；
+    p53：meta设置，模拟手机界面
+        <meta name="viewpoint" content="width=375或 device-width" >
+        
+**注释：
+px 像素；
+em 相对于自己的字体大小，或者相对于父级；
+10% 相对于父级；
+vw view-width；可视区宽度的100%
+vh view-height；
+vmax 可视区的max（view-width,view-height）;
+vmin
+rem:root element相对于根字体的单位；
+    foot-foot-size：20px；
+</body>
+</html>
