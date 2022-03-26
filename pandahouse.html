@@ -19,20 +19,25 @@
             text-align:center;
             font-weight: bold;
             font-size: 1.5em;
-            background-color: rgb(125, 122, 128);
+            /* color: #A3D2E2; */
+            background-color: rgb(250, 250, 250);
             margin-bottom: 0px;
-            
+            border: solid;
         }
         #intro{
             height: 29vh;
             width: 100vw;
             display: flex;
-            background-color: rgb(155, 155, 144);
+            background-color: rgb(250, 250, 250);
+            /* border: dashed; */
+            border: solid;
+            margin-top: -2px;
         }
             #intro #text0{
                 width: 67%;
                 font-style:italic;
                 font-size: 0.8em;
+                color: #A3D2E2;
             }
             #intro #date{
                 width: 33%;
@@ -40,6 +45,7 @@
                 font-weight: bold;
                 font-style: inherit;
                 text-align: center;
+                color: #003d73;
             }
         #extraIntro{
             display: flex;
@@ -47,7 +53,11 @@
             #market{
                 height: 100vh;
                 width: 33vw;
-                background-color: rgb(170, 89, 96);
+                background-color: rgb(250, 250, 250);
+                border: solid;
+                margin-top: -2px;
+                color: #c32635;
+                border-color: black;
             }   
                 #priceboard{
                     height:55vh;
@@ -57,6 +67,7 @@
                 #priceboardlink{
                     text-align: center;
                     font-size: 1em;
+                    color: #c32635;
                 }
                 #concreteRules{
                     width: 100%;
@@ -67,13 +78,17 @@
                 height: auto;
                 width: 67vw;
                 /* flex: 1; */
-                background-color: rgb(236, 252, 144);
+                /* background-color: rgb(250, 250, 250); */
                 display: flex;
             }
                 #present{
                     height: 100%;
                     width: 67%;
-                    background-color: rgb(123, 123, 139);
+                    background-color: rgb(250,250,250);
+                    border: solid;
+                    border-color: black;
+                    margin-top: -2px;
+                    margin-left: -2px;
                 }
                     #wallet{
                         height: 7em;
@@ -88,7 +103,7 @@
                             margin-top: 0.2em; 
                             margin-bottom: 0.2em; 
                             margin-left: 1em; */
-                            background-color: yellow;
+                                                        background-color: #A3D2E2;
                         }
                         #extraWTitle{
                             height: 18%;
@@ -116,7 +131,7 @@
                             margin-top: 0.2em; 
                             margin-bottom: 0.2em; 
                             margin-left: 1em; */
-                            background-color: yellow;
+                            background-color: #A3D2E2;
                         }
                         #extraTbTitle{
                             height: 52%;
@@ -142,7 +157,8 @@
                 #memorycard{
                     height: 100%;
                     width: 33%;
-                    background-color: aquamarine;
+                    background-color:rgb(250, 250, 250);
+                    color: #e4A94b;
                 }
     </style>
 </head>
@@ -187,7 +203,7 @@
                     <br>每个周期进行一次清算，目前暂定一次周期为1月。
                     <h3>价格指示牌:</h3>
                     <div id="priceboardlink">
-                        <a href="pandahouselink/priceboard.html">price board</a>
+                        <a href="pandahouselink/priceboard.html" style="color: #c32635;">price board</a>
                     <div id="concreteRules">
                         <h3>具体规则：</h3>
                         <h4>任务与惩罚:</h4>
@@ -227,8 +243,10 @@
                         </div>
                     </div>
                     <div id="game">
-                        <h3>game：</h3>
-                        <table style="font-size: 00.8em; text-align: center; width: 100%; background-color: rgb(233, 164, 164);">
+                        <div style="background-color: #A3D2E2;">
+                            <h3>game：</h3>
+                        </div>
+                        <table style="font-size: 00.8em; text-align: center; width: 100%; ">
                             <tr>
                                 <th>game</th>
                                 <th>pandacoins</th>
@@ -246,7 +264,7 @@
                         <div id="extraTbTitle">
                             <div id="tbP1">
                                 Chalili:
-                                <table style="font-size: 00.8em; text-align: center; width: 90%; background-color: rgb(233, 164, 164);">
+                                <table style="font-size: 00.8em; text-align: center; width: 90%; background-color: #769548;">
                                     <tr>
                                         <th>task</th>
                                         <th>result</th>
@@ -272,7 +290,7 @@
                             </div>
                             <div id="tbP2">
                                 Sisen:
-                                <table style="font-size: 00.8em; text-align: center; width: 90%; background-color: rgb(167, 210, 228);">
+                                <table style="font-size: 00.8em; text-align: center; width: 90%; background-color: #769548;">
                                     <tr>
                                         <th>task</th>
                                         <th>result</th>
@@ -296,7 +314,7 @@
                     </div>
                     <h3>history record:</h3>
                         <div id="historylink">
-                            <a href="pandahouselink/history.html">LiuZhang历史任务及所得</a>
+                            <a href="pandahouselink/history.html" style="color: #e4A94b;">LiuZhang历史任务及所得</a>
                         </div>
                     <br>2022年3月，period 1，为期一周
                     <br>
